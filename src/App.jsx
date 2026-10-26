@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Favorites from './pages/Favorites';
+import { MovieProvider } from './contexts/MovieContext';
+import WatchList from './pages/WatchList';
 import './App.css';
 
 function App() {
@@ -29,16 +31,18 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="app">
-        <Header onSearch={handleSearch} />
-        <Routes>
-          <Route path="/" element={<Home searchResults={searchResults} />} 
-          />
-          <Route path="/favorites" element={<Favorites />} />
-        </Routes>
-      </div>
-    </Router>
+    <MovieProvider>
+      <Router>
+        <div className="app">
+          <Header onSearch={handleSearch} />
+          <Routes>
+            <Route path="/" element={<Home searchResults={searchResults} />} />
+            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/watchList" element={<WatchList />} />
+          </Routes>
+        </div>
+      </Router>
+    </MovieProvider>
   );
 };
 

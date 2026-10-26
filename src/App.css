@@ -242,3 +242,35 @@ body {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
+
+/* Styled movie card (help from AI) */
+.movie-card button {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Subtle hover effect */
+.movie-card button:hover {
+  background-color: #eeeeee;
+  border-color: #bdbdbd;
+}
+
+/* Visible keyboard focus */
+.movie-card button:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: 2px;
+}
+
+/* Keep buttons comfortable on smaller screens */
+.movie-card button:active {
+  background-color: #e5e5e5;
+}

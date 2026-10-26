@@ -19,6 +19,7 @@ function Header({ onSearch }) {
         <nav className="nav-links">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/favorites" className="nav-link">Favorites</Link>
+          <Link to="/watchList" className="nav-link">WatchList</Link>
         </nav>
         <div className="search-container">
           <input 
